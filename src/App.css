@@ -1,0 +1,47 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: darkred;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+.App-list {
+  color: #09d3ac;
+}
+
+.App-footer{
+  background-color: darkred;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: white;
+  margin-bottom: 1rem;
+  min-height: 5vh;
+}
+
+.btn {
+  padding: 5px;
+}
+
+.flex{
+  display: flex;
+  justify-content: space-around;
+}
+
+.img{
+  height: 40px;
+}
