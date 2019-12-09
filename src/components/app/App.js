@@ -2,9 +2,7 @@ import React, {Component} from 'react';
 import './App.css';
 import {footer} from "../footer/footer"
 import {Header} from "../header/header";
-import {renderPeopleList} from "../main/renderPeople";
-import {InputName} from "../main/inputName";
-import {ThemeChanger} from '../main/themeChanger'
+import {ThemeChanger, RenderPeople, InputName} from "../main";
 
 class App extends Component{
     constructor() {
@@ -37,7 +35,7 @@ class App extends Component{
         return(
             <div className={`${dark_theme} App`}>
                 <Header className="flex, App-header" geeting="Hello there!"/>
-                {renderPeopleList()}
+                <RenderPeople/>
                 <ThemeChanger onSubmit={this.toDarkTheme} className="btn"/>
                 <InputName onSubmit={this.ifSuccess} isFormGreen={success}/>
                 {success && <div className="flex App-link">Success</div>}
