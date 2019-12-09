@@ -1,0 +1,7 @@
+.App-footer{
+    background-color: lightsteelblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%
+}
