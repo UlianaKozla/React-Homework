@@ -3,7 +3,7 @@ import './footer.css'
 
 const green = {color: 'green'};
 
-export function footer() {
+export function Footer() {
     return(
         <div className="App-footer">
             <a href="https://www.instagram.com/" style={{color: 'red'}}>Instagram</a>

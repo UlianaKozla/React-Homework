@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import './App.css';
-import {footer} from "../footer/footer"
+import {Footer} from "../footer/footer"
 import {Header} from "../header/header";
-import {ThemeChanger, RenderPeople, InputName} from "../main";
+import {ThemeChanger, renderPeople, InputName} from "../main";
 
 class App extends Component{
     constructor() {
@@ -10,7 +10,7 @@ class App extends Component{
 
         this.state = {
             success: false,
-            isdarkTheme: false
+            isDarkTheme: false
         }
     }
 
@@ -22,24 +22,34 @@ class App extends Component{
     }
 
     toDarkTheme = (e) => {
-        const {isdarkTheme} = this.state;
+        const {isDarkTheme} = this.state;
         this.setState({
-            isdarkTheme: !isdarkTheme
+            isDarkTheme: !isDarkTheme
         });
     }
 
     render() {
-        const  {success, isdarkTheme} = this.state;
-        const dark_theme = isdarkTheme ? `black` : 'white';
+        const  {success, isDarkTheme} = this.state;
+        const darkTheme = isDarkTheme ? `black` : 'white';
 
         return(
-            <div className={`${dark_theme} App`}>
-                <Header className="flex, App-header" geeting="Hello there!"/>
-                <RenderPeople/>
-                <ThemeChanger onSubmit={this.toDarkTheme} className="btn"/>
-                <InputName onSubmit={this.ifSuccess} isFormGreen={success}/>
+            <div className={`${darkTheme} App`}>
+                <Header
+                    className="flex App-header"
+                    geeting="Hello there!"
+                />
+                {renderPeople()}
+                <ThemeChanger
+                    onSubmit={this.toDarkTheme}
+                    className="btn"
+                    words={isDarkTheme ? 'White theme' : 'Dark theme'}
+                />
+                <InputName
+                    onSubmit={this.ifSuccess}
+                    isFormGreen={success}
+                />
                 {success && <div className="flex App-link">Success</div>}
-                <div>{footer()}</div>
+                <Footer/>
             </div>
         )
     }

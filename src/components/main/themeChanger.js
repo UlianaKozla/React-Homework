@@ -15,17 +15,16 @@ export class ThemeChanger extends Component{
 
     onClick = (isClicked) => {
         this.setState({
-            isClicked: !isClicked
+            isClicked: isClicked.toggle()
         })
     }
 
 
     render() {
-        const {onSubmit} = this.props;
-
+        const {onSubmit, words} = this.props;
         return(
             <button onClick={onSubmit} className="btn">
-                Dark theme
+                {words}
             </button>
         )
     }

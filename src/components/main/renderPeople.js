@@ -1,7 +1,7 @@
 import React from 'react';
 import {people} from "../../constants/people";
 
-export function RenderPeople() {
+export function renderPeople() {
     return people.map(person => {
         const { name, surname, image } = person;
         return (

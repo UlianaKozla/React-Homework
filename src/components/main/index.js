@@ -1,5 +1,5 @@
 import {InputName} from './inputName'
 import {ThemeChanger} from './themeChanger'
-import {RenderPeople} from './renderPeople'
+import {renderPeople} from './renderPeople'
 
-export {InputName, ThemeChanger, RenderPeople}
+export {InputName, ThemeChanger, renderPeople}
